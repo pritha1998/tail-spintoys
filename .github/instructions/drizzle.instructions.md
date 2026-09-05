@@ -70,4 +70,10 @@ Node.js 22.13 or later is required because the data layer uses the built-in `nod
 ## Type checking
 
 The data layer (`db/**/*.ts`, `src/lib/*.ts`) is type-checked by `npm run typecheck`, which runs the native **TypeScript 7** compiler (`tsgo`, from `@typescript/native-preview`) against `tsconfig.tsgo.json`. Keep helpers exported with explicit parameter and return types so `tsgo` can verify them. Linting is unaffected — ESLint + `typescript-eslint` still run on the classic `typescript` package.
-made changes.... link this instruction file to other instruction file
+
+## Related guidance and examples
+
+- [`unit-tests.instructions.md`](unit-tests.instructions.md) — unit-test patterns for transforms and data-access helpers.
+- [`schema.ts`](../../db/schema.ts) — current Drizzle table definitions.
+- [`games.ts`](../../src/lib/games.ts) — injectable data-access helper patterns.
+- [`test-helpers.ts`](../../db/test-helpers.ts) — in-memory database setup used by tests.
